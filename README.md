@@ -154,3 +154,5 @@ Para administrar un directorio telefónico sin claves duplicadas y ordenado por 
 ### Capturas
 
 ![alt text](<Captura de pantalla 2025-07-08 195119.png>)
+
+![alt text](<Captura de pantalla 2025-07-09 175158.png>)

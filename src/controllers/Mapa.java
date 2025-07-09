@@ -95,9 +95,6 @@ public class Mapa {
         empleados.put(new Empleado(1,"Juan", "Senior"),3000);
     
         System.out.println(empleados);
-
-        
-
     }
     
 }

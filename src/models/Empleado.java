@@ -31,16 +31,23 @@ public class Empleado implements Comparable<Empleado> {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (!(obj instanceof Empleado)) return false;
+        if (obj == null || getClass() != obj.getClass()) return false;
         Empleado empleado = (Empleado) obj;
-        return id == empleado.id && name.equals(empleado.name);
+        return this.id == empleado.id;
+
+        // if (this == obj) return true;
+        // if (!(obj instanceof Empleado)) return false;
+        // Empleado empleado = (Empleado) obj;
+        // return id == empleado.id && name.equals(empleado.name);
     }
 
     @Override
     public int hashCode() {
-        int result = Integer.hashCode(id);
-        result = 31 * result + name.hashCode();
-        return result;
+        return Integer.hashCode(id);
+
+        // int result = Integer.hashCode(id);
+        // result = 31 * result + name.hashCode();
+        // return result;
     }
 
     @Override
