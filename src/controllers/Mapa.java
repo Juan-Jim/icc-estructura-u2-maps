@@ -18,7 +18,7 @@ public class Mapa {
         mapa.put("001", "Celular");
         mapa.put("002", "Laptop");
         mapa.put("003", "Celular");
-        // Actualiza el valor y si no exite lo creo
+        // Actualiza el valor y si no exite lo crea
         mapa.put("003", "PC");
 
         System.out.println(mapa);

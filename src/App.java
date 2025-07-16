@@ -1,8 +1,10 @@
+import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
 import controllers.EmpleadoDAO;
 import controllers.EmpleadoDAOHashMap;
 import controllers.EmpleadoDAOTreeMap;
 import controllers.Mapa;
+import java.util.Arrays;
 import models.Empleado;
 
 public class App {
@@ -11,14 +13,14 @@ public class App {
         System.out.println("----Practica Mapas----");
         System.out.println("Nombre: Juan Jimenez"); /// Cambiar por su nombre
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
-        //runMapExamlpe();
+        runMapExamlpe();
         runEmpleadoExample();
 
         // // Ejecuta el ejemplo de gestión de empleados usando HashMap
         // runEmpleadoExample();
 
         // // Ejecuta los ejercicios de sumatoria y anagramas
-        // runEjerccios();
+        runEjerccios();
     }
 
     private static void runMapExamlpe() {
@@ -73,7 +75,29 @@ public class App {
 
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        System.out.println("¿'listen' y 'silent' son anagramas? " + Ejercicios.areAnagrams("listen", "silent"));
+        System.out.println("¿'hello' y 'bello' son anagramas? " + Ejercicios.areAnagrams("hello", "bello"));
+        System.out.println("¿'triangle' y 'integral' son anagramas? " + Ejercicios.areAnagrams("triangle", "integral"));
 
+        Ejercicios ejercicios = new Ejercicios(); 
+
+        int[] resultado1 = ejercicios.sumatoriaDeDos(new int[]{9, 2, 3, 6}, 5);
+        int[] resultado2 = ejercicios.sumatoriaDeDos(new int[]{9, 2, 3, 6}, 10);
+
+        System.out.println("Resultado suma objetivo 5: " + (resultado1 != null ? Arrays.toString(resultado1) : "null"));
+        System.out.println("Resultado suma objetivo 10: " + (resultado2 != null ? Arrays.toString(resultado2) : "null"));
+
+        System.out.print("Frecuencia de caracteres en 'hola': ");
+        ejercicios.contarCaracteres("hola");
+
+        System.out.print("Frecuencia de caracteres en 'programación': ");
+        ejercicios.contarCaracteres("programación");
+
+        
+        System.out.println("¿'roma' y 'amor' son anagramas? " + ejercicios.sonAnagramas("roma", "amor"));
+        System.out.println("¿'gato' y 'toga' son anagramas? " + ejercicios.sonAnagramas("gato", "toga"));
+        System.out.println("¿'perro' y 'gato' son anagramas? " + ejercicios.sonAnagramas("perro", "gato"));
     }
+
+    
 }
